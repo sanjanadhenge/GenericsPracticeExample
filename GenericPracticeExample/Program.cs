@@ -24,7 +24,10 @@ namespace GenericPracticeExample
             FindMinimum findMinimum = new FindMinimum();
             //findMinimum.FindMinInt();
             //findMinimum.FindMinFloat();
-            findMinimum.FindMinString();
+            // findMinimum.FindMinString();
+            findMinimum.FindMin<int>(50, 100, 150);
+            findMinimum.FindMin<double>(5.2f, 9.8f, 1.50f);
+            findMinimum.FindMin<string>("Apple","Mango","Banana");
 
         }
     }

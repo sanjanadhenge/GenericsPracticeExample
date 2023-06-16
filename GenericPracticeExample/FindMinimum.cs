@@ -8,6 +8,21 @@ namespace GenericPracticeExample
 {
     internal class FindMinimum
     {
+        public void FindMin<T>(T a, T b, T c) where T : IComparable
+        {
+            if (a.CompareTo(b) < 0 && a.CompareTo(c) < 0 || a.CompareTo(b) <= 0 && a.CompareTo(c) < 0 || a.CompareTo(b) < 0 && a.CompareTo(c) <= 0)
+            {
+                Console.WriteLine("{0} is Minimum", a);
+            }
+            if (b.CompareTo(a) < 0 && b.CompareTo(c) < 0 || b.CompareTo(a) <= 0 && b.CompareTo(c) < 0 || b.CompareTo(a) < 0 && b.CompareTo(c) <= 0)
+            {
+                Console.WriteLine("{0} is Minimum", b);
+            }
+            if (c.CompareTo(a) < 0 && c.CompareTo(b) < 0 || c.CompareTo(a) <= 0 && c.CompareTo(b) < 0 || c.CompareTo(a) < 0 && c.CompareTo(b) <= 0)
+            {
+                Console.WriteLine("{0} is Minimum", c);
+            }
+        }
         public void FindMinInt()
         {
             Console.WriteLine("Enter 1st Number");
