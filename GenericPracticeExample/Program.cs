@@ -22,7 +22,8 @@ namespace GenericPracticeExample
             //DeleteArray<char> deleteArray2 = new DeleteArray<char>(CharArray);
             //deleteArray2.DeleteUsingGenerics('d');
             FindMinimum findMinimum = new FindMinimum();
-            findMinimum.FindMinInt();
+            //findMinimum.FindMinInt();
+            findMinimum.FindMinFloat();
 
         }
     }
