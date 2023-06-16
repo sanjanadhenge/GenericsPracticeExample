@@ -11,6 +11,29 @@ namespace GenericPracticeExample
         int[] IntArray = { 1, 5, 8, 9, 6, 3, 4 };
         double[] DoubleArray = { 1.1, 5.7, 9.8, 5.6 };
         char[] CharArray = { 'a', 'b', 'c', 'd', 'e', 'f' };
+        public void DeleteUsingGenerics<T>(T [] arr, T search) where T : IComparable
+        {
+            T [] arr1 = new T[10];
+            int k = 0;
+            int flag = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i].Equals(search))
+                {
+                    flag = 1;
+                }
+                if(flag == 0)
+                {
+                    arr1[k] = arr[i];
+                    k++;
+                }
+            }
+            arr = arr1;
+            for (int i = 0; i < k; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
         public void Delete()
         {
             bool flag = true;
@@ -20,11 +43,20 @@ namespace GenericPracticeExample
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
-                    case 1: DeleteInteger();
+                    case 1: //DeleteInteger();
+                        Console.WriteLine("Enter the element you want to delete");
+                        int search = Convert.ToInt32(Console.ReadLine());
+                        DeleteUsingGenerics<int>(IntArray, search);
                         break;
-                    case 2: DeleteDouble();
+                    case 2: //DeleteDouble();
+                        Console.WriteLine("Enter the element you want to delete");
+                        double search1 = Convert.ToDouble(Console.ReadLine());
+                        DeleteUsingGenerics<double>(DoubleArray, search1);
                         break;
-                    case 3: DeleteChar();
+                    case 3:// DeleteChar();
+                        Console.WriteLine("Enter the element you want to delete");
+                        char search2 = Convert.ToChar(Console.ReadLine());
+                        DeleteUsingGenerics<char>(CharArray, search2);
                         break;
                     default:
                         flag = false;
