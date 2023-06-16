@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace GenericPracticeExample
 {
-    internal class FindMinimum
+    internal class FindMinimum<T> where T : IComparable
     {
-        public void FindMin<T>(T a, T b, T c) where T : IComparable
+        T a, b, c;
+        public FindMinimum(T a, T b, T c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+
+        }
+    
+        public void FindMin()
         {
             if (a.CompareTo(b) < 0 && a.CompareTo(c) < 0 || a.CompareTo(b) <= 0 && a.CompareTo(c) < 0 || a.CompareTo(b) < 0 && a.CompareTo(c) <= 0)
             {
