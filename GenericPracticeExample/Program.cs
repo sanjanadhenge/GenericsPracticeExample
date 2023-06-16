@@ -23,7 +23,8 @@ namespace GenericPracticeExample
             //deleteArray2.DeleteUsingGenerics('d');
             FindMinimum findMinimum = new FindMinimum();
             //findMinimum.FindMinInt();
-            findMinimum.FindMinFloat();
+            //findMinimum.FindMinFloat();
+            findMinimum.FindMinString();
 
         }
     }
